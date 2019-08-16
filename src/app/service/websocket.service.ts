@@ -12,7 +12,7 @@ export class WebsocketService {
 
   init(){
 
-    this.websocket = new WebSocket('wss://damp-reaches-33149.herokuapp.com');
+    this.websocket = new WebSocket('WEBSOCKET_URL');
 
      this.websocket.onopen = function(evt) {
         console.log('CONNECTED');
