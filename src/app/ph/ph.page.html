@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        S-AQUA
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div [class]="coverClass()">
+      <h4 class="word">CURRENT pH Level:</h4>
+      <h2 class="word">{{ph}} pH</h2>
+    </div>
+
+    <div padding style="color:white">
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-label style="font-weight: 900">Timestamp</ion-label>
+              </ion-col>
+              <ion-col>
+                  <ion-label style="font-weight: 900">pH Level</ion-label>
+              </ion-col>
+              <ion-col>
+                  <ion-label style="font-weight: 900">Remarks</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngFor="let item of historyPh;let i = index">
+                <ion-col>
+                    {{historyPh[historyPh.length - (i + 1)].timestamp}}
+                  </ion-col>
+                  <ion-col>
+                      {{historyPh[historyPh.length - (i + 1)].level}} pH
+                  </ion-col>
+                  <ion-col>
+                      {{historyPh[historyPh.length - (i + 1)].remarks}}
+                  </ion-col>
+            </ion-row>
+          </ion-grid>
+    </div>
+  </ion-content>
+  

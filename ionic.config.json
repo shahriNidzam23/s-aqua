@@ -1,5 +1,7 @@
 {
   "name": "sacs",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

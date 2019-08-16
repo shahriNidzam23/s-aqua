@@ -1,14 +1,30 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="header">
     <ion-title>
-      Ionic Blank
+      S-AQUA
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+<ion-content padding class="body">
+<ion-card routerLink="/temp">
+  <div class="kb-div-card-image">
+      <img src="assets/image/temp.jpg"/>
   </div>
+    <ion-card-content>
+      <ion-card-subtitle text-center style="color:white">
+        {{getTemp() ? "Temperature: " + getTemp() + "°C" : "Reading..."}}
+      </ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+  <ion-card routerLink="/ph">
+    <div class="kb-div-card-image">
+        <img src="assets/image/original.jpeg"/>
+    </div>
+      <ion-card-content>
+        <ion-card-subtitle text-center style="color: white">
+          {{getPh() ? "pH: " + getPh() + "pH" : "Reading..."}}
+        </ion-card-subtitle>
+      </ion-card-content>
+    </ion-card>
 </ion-content>
